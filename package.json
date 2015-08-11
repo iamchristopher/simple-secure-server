@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/iamchristopher/simple-secure-server/issues"
   },
-  "homepage": "https://github.com/iamchristopher/simple-secure-server"
+  "homepage": "https://github.com/iamchristopher/simple-secure-server",
+  "dependencies": {
+    "async": "^1.4.2"
+  }
 }
