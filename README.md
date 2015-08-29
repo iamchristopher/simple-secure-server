@@ -23,6 +23,14 @@ require('simple-secure-server')(app, {
 });
 ```
 
+##More Examples
+You can also supply a callback method which gives you access to an error object (if applicable), the default server, and the secure server (if launched). This can be done with or without `options` provided.
+```js
+require('simple-secure-server', app, [options, ] function (err, default, secure) {
+    // ...
+});
+```
+
 ## Configuration
 The module accepts a configuration object as an optional second parameter.
 ```js
@@ -37,6 +45,10 @@ require('simple-secure-server')(app, {
 __ports__ &mdash; Specify which ports should be used
 - Must be an Integer;
 - Defaults to 80 for _default_ and 443 for _secure_
+
+__secureRedirect__ &mdash; Redirects requests from `http://` to `https://`
+- Must be a Boolean;
+- Defaults to `true`, when secure server is available.
 
 __files__ &mdash; Paths to certificate files
 - Must be an Array valid file paths;
