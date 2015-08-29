@@ -38,6 +38,10 @@ __ports__ &mdash; Specify which ports should be used
 - Must be an Integer;
 - Defaults to 80 for _default_ and 443 for _secure_
 
+__secureRedirect__ &mdash; Redirects requests from `http://` to `https://`
+- Must be a Boolean;
+- Defaults to `true`, when secure server is available.
+
 __files__ &mdash; Paths to certificate files
 - Must be an Array valid file paths;
 - The first element must be the `.key` file, and the second `.crt`.
