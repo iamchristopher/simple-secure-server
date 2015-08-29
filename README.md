@@ -46,5 +46,5 @@ ____
 #### TODO
 - [ ] Allow only launching SSL server
 - [ ] Launch server based on config _and_ certificate files
-- [ ] Make options parameter optional
+- [x] Make options parameter optional
 - [ ] Allow custom listeners
