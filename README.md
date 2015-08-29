@@ -23,6 +23,14 @@ require('simple-secure-server')(app, {
 });
 ```
 
+##More Examples
+You can also supply a callback method which gives you access to an error object (if applicable), the default server, and the secure server (if launched). This can be done with or without `options` provided.
+```js
+require('simple-secure-server', app, [options, ] function (err, default, secure) {
+    // ...
+});
+```
+
 ## Configuration
 The module accepts a configuration object as an optional second parameter.
 ```js
