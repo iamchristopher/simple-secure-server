@@ -16,10 +16,15 @@ require('simple-secure-server')(app);
 The following will launch _both_ the default server as well as one with SSL.
 ```js
 require('simple-secure-server')(app, {
-    files: [
-        '/path/to/site.key',
-        '/path/to/site.crt'
-    ]
+    secure: true
+});
+```
+
+##More Examples
+You can also supply a callback method which gives you access to an error object (if applicable), the default server, and the secure server (if launched). This can be done with or without `options` provided.
+```js
+require('simple-secure-server', app, [options, ] function (err, default, secure) {
+    // ...
 });
 ```
 
@@ -35,8 +40,16 @@ require('simple-secure-server')(app, {
 
 ### Options
 __ports__ &mdash; Specify which ports should be used
-- Must be an Integer;
+- May be be an Integer or String;
 - Defaults to 80 for _default_ and 443 for _secure_
+
+__secure__ &mdash; Launches secure server
+- Must be a Boolean;
+- Defaults to `false`
+
+__secureRedirect__ &mdash; Redirects requests from `http://` to `https://`
+- Must be a Boolean;
+- Defaults to `true`, when secure server is available.
 
 __files__ &mdash; Paths to certificate files
 - Must be an Array valid file paths;
@@ -45,6 +58,6 @@ __files__ &mdash; Paths to certificate files
 ____
 #### TODO
 - [ ] Allow only launching SSL server
-- [ ] Launch server based on config _and_ certificate files
+- [x] Launch server based on config _and_ certificate files
 - [x] Make options parameter optional
 - [ ] Allow custom listeners
