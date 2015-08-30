@@ -57,6 +57,6 @@ __files__ &mdash; Paths to certificate files
 ____
 #### TODO
 - [ ] Allow only launching SSL server
-- [ ] Launch server based on config _and_ certificate files
+- [x] Launch server based on config _and_ certificate files
 - [x] Make options parameter optional
 - [ ] Allow custom listeners
